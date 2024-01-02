@@ -3,7 +3,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
     "client": "npm start --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "react-install": "cd ./client && npm install && npm run build && npm start",
+    "dev": "concurrently \"npm run server\" \" npm run react-install \"",
+    "start": "concurrently \"node index.js\" \" npm run react-install \""
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
