@@ -20,15 +20,6 @@ app.use("/api/v1/admin", require("./routes/adminRoutes"));
 // STATIC FOLDER
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-// STATIC ROUTES
-// app.get('*' , function(req, res){
-//     res.sendFile.path.join(__dirname , './client/build/index.html');
-// })
-
-// app.get('*', function(req, res){
-//     res.sendFile(path.join(__dirname, './client/build/index.html'));
-// })
-
 // Port and Server starting
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
